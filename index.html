@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Procesador 4-Bits (ALU)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulador de ALU de 4 Bits</h1>
+
+    <div class="controls">
+        <label for="numA">A (0-15):</label>
+        <input type="number" id="numA" value="5" min="0" max="15">
+        
+        <label for="op">Operación:</label>
+        <select id="operation">
+            <option value="ADD">ADD (Suma)</option>
+            <option value="SUB">SUB (Resta)</option>
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+            <option value="NOT">NOT (A)</option>
+        </select>
+
+        <label for="numB">B (0-15):</label>
+        <input type="number" id="numB" value="3" min="0" max="15">
+        
+        <button id="calculateBtn">Simular</button>
+    </div>
+
+    <div id="processor-diagram">
+        <div id="data-packet"></div>
+        <div class="bus-line" id="bus-a-alu"></div>
+        <div class="bus-line" id="bus-b-alu"></div>
+        <div class="bus-line" id="bus-alu-out"></div>
+        
+        <div class="component" id="regA">
+            <strong>Registro A</strong>
+            <span id="valA">0000</span>
+        </div>
+        <div class="component" id="regB">
+            <strong>Registro B</strong>
+            <span id="valB">0000</span>
+        </div>
+
+        <div class="component" id="alu">
+            <strong>ALU</strong>
+            <span id="alu-status">Idle</span>
+            <div class="flags">
+                <span>Z</span><span id="flagZ">0</span>
+                <span>N</span><span id="flagN">0</span>
+                <span>V</span><span id="flagV">0</span>
+                <span>C</span><span id="flagC">0</span>
+            </div>
+        </div>
+
+        <div class="component" id="output">
+            <strong>Registro Salida</strong>
+            <span id="valOut">0000</span>
+        </div>
+    </div>
+
+    <div id="log">
+        <h3>Log de Simulación:</h3>
+        <pre id="log-content"></pre>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

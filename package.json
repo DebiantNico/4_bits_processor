@@ -1,0 +1,23 @@
+{
+  "name": "procesador-4bit",
+  "version": "1.0.0",
+  "description": "4 bits processor proyect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DebiantNico/4_bits_processor.git"
+  },
+  "author": "Nicolas, Maria, Fernanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DebiantNico/4_bits_processor/issues"
+  },
+  "homepage": "https://github.com/DebiantNico/4_bits_processor#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "ws": "^8.18.3"
+  }
+}
